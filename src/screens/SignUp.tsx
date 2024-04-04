@@ -6,7 +6,7 @@ import BackgroundImg from '@assets/background.png';
 import { Input } from "@components/Input";
 import { Button } from "@components/Button";
 
-export function SignIn() {
+export function SignUp() {
   return (
     <ScrollView
       contentContainerStyle={{ flexGrow: 1 }}
@@ -20,7 +20,7 @@ export function SignIn() {
           position="absolute"
         />
 
-        <Center mt={24}>
+        <Center>
           <LogoSvg />
 
           <Text color="gray.100" fontSize="sm">
@@ -28,41 +28,34 @@ export function SignIn() {
           </Text>
         </Center>
 
-        <Center>
-          <Heading color={"gray.100"} fontSize="xl" mb={6} fontFamily="heading">
-            Acesse sua conta
-          </Heading>
-          <Input
-            placeholder="E-mail"
-            keyboardType="email-address"
-            autoCapitalize="none"
-          />
-          <Input
-            placeholder="Senha"
-            secureTextEntry
-          />
-          <Button
-            title="Acessar"
-          />
-        </Center>
+        <Center mt={24}>
+            <Heading color={"gray.100"} fontSize="xl" mb={6} fontFamily="heading">
+                Crie sua conta
+            </Heading>
 
-        <Center
-          mt={24}
-        >
-          <Text
-            color="gray.100"
-            fontSize="sm"
-            mb={3}
-            fontFamily="body"
-            >
-            Ainda não tem acesso?
-          </Text>
+            <Input
+                placeholder="Nome"
 
-          <Button
-            title="Criar conta"
-            variant="outline"
+            />
+            <Input
+                placeholder="E-mail"
+                keyboardType="email-address"
+                autoCapitalize="none"
+            />
+                <Input
+                placeholder="Senha"
+                secureTextEntry
+            />
+            <Button
+                title="Criar e acessar"
             />
         </Center>
+
+          <Button
+            title="Voltar para o login"
+            variant="outline"
+            mt={24}
+            />
       </VStack>
     </ScrollView>
   );
